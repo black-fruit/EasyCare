@@ -1,0 +1,9 @@
+{
+  "starting": 0,
+  "preChecking": 1,
+  "toLogin": 2,
+  "login": 3,
+  "toWork": 4,
+  "work": 5,
+  "toLogout": 6
+}

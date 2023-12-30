@@ -1,0 +1,78 @@
+/* 由于PC版自带chrome内核，光明正大地修改滚动条样式 */
+::-webkit-scrollbar {width: 6px;height:6px;}
+::-webkit-scrollbar-track-piece{background-color: #eee; }
+::-webkit-scrollbar-thumb{background: #aaa;min-height: 150px;min-width: 150px;border-radius: 10px;}
+::-webkit-scrollbar-thumb:vertical:hover{background: #555555}
+::-webkit-scrollbar-thumb:horizontal:hover{background: #555555}
+
+html{
+	height: 100%;
+}
+
+body{
+	margin: 0;
+
+	height: 100%;
+	
+	/* 防止第三方样式引入白底 */
+	background: transparent !important;
+
+	overflow: hidden;	
+}
+
+#main-panel{
+	display: block;
+
+	width: 800px;
+	height: 610px;	
+
+  border-radius: 8px;
+
+	background-color: #ffffff;
+  box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.2);
+}
+
+#header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+	-webkit-user-select: none;
+	-webkit-app-region: drag;
+
+	height: 40px;
+
+	padding-left: 20px;
+
+	background-color: #39A8FF;
+
+	position: relative;
+
+	z-index: 1000;
+}
+
+#header .close-btn{
+	-webkit-app-region: no-drag;
+	float: right;
+	cursor: pointer;
+	margin-right: 16px;
+	font-size: 16px;
+	color: rgba(0, 0, 0, 0.4);
+}
+
+#header .close-btn:before {
+	font-weight: bold;
+}
+
+#header-title{
+	color: #000000;
+	font-size: 16px;
+	line-height: 40px;
+  font-weight: bold;
+	line-height: 46px;
+}
+
+#bodyer{
+	padding: 10px;
+	font-size: 12px;
+}

@@ -1,0 +1,20 @@
+{
+  "referer": "https://care.seewo.com",
+  "serverUrl": "https://care.seewo.com",
+  "apiUrl": "https://care.seewo.com/easicare",
+  "authUrl": "https://id.seewo.com",
+  "adminUrl": "https://care.seewo.com/seewo-admin",
+  "careReportId": "6aa38563edc4a006bf940d65da5b0706",
+  "capmId": "1aefcd82889b9bb58200b0790236e722daade4d8",
+  "capmUrl": "https://myou.cvte.com/grail/api/report/raw",
+  "tencentSSOUrl": "https://sso.qq.com/statics/login-pc/index.html?app=700649",
+  "SingleSignService": {
+    "url": "https://local.id.seewo.com",
+    "basePort": 23300,
+    "portScope": 6
+  },
+  "entirePackageCode": "EasiCare",
+  "interceptCookies": [
+    "pt_token"
+  ]
+}

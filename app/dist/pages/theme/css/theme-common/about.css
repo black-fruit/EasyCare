@@ -1,0 +1,283 @@
+@font-face {
+  font-family: 'iconfont';
+  src: url('../../../theme/font/iconfont/iconfont.woff2') format('woff2');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html,body{
+  margin: 0;
+  padding: 0;
+}
+html{
+  height: 100%;
+  width: 100%;
+}
+body{
+  width: 980px;
+  height: 652px;
+  margin: 16px auto;
+  user-select: none;
+  border-radius: 8px;
+}
+
+img, a {
+  -webkit-user-drag: none;
+}
+
+@font-face {
+  font-family: 'PingFangSC-Regular';
+  src: url('../../font/PingFangSC/PingFangSC-Regular.woff') format('woff');
+
+}
+ * {
+  font-family: 'PingFangSC-Regular';
+}
+
+ #header{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  
+  width: 100%;
+  height: 30px;
+  z-index: 10;
+  
+  -webkit-app-region: drag;
+}
+
+#header #close-btn{
+  position: absolute;
+  top: 14px;
+  right: 22px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+ #header .close-btn{
+  color: #FFFFFF;
+}
+
+.theme-simple #header .close-btn{
+  display: none;
+}
+
+#header .close-btn-simple{
+  display: none;
+}
+
+.theme-simple #header .close-btn-simple{
+  display: inline-block;
+  color:  #000000;
+}
+
+
+ #header span{
+  position: absolute;
+  top: 0;
+  left: 22px;
+  font-size: 16px;
+  color: #eee;
+  line-height: 46px;
+}
+
+.theme-simple #header span{
+
+  color: rgba(0, 0, 0, 0.8);
+}
+
+ #bodyer{
+  position: relative;
+  width: 968px;
+  height: 640px;
+  text-align: center;
+  margin: 12px;
+  background-color: #fff;
+  box-shadow: 0px 8px 32px 0px rgba(44, 135, 204, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.theme-cool #bodyer{
+  background: #1E2647;
+  box-shadow: 0px 8px 32px 0px rgba(0, 0, 0, 0.2);
+}
+
+ #bodyer #info-panel{
+  position: relative;
+  height: 436px;
+  background-image: url("../../images/about/bg-about.png");
+  background-size: 100%;
+  text-align: center;
+}
+
+.theme-cool #bodyer #info-panel{
+  background-image: url("../../images/about/bg-about-cool.png");
+  background-size: 100%;
+}
+
+.theme-simple #bodyer #info-panel{
+  background-image: url("../../images/about/bg-about-simple.png");
+  background-size: 100%;
+}
+
+ #bodyer #info-panel .version-text{
+  display: block;
+  font-size: 20px;
+  color: #fff;
+  padding-top: 300px;
+}
+
+.theme-simple  #bodyer #info-panel .version-text{
+  color: rgba(0, 0, 0, 0.8);
+}
+
+ #bodyer #info-panel p{
+  text-align: center;
+  width: 100%;
+  font-family: 'Microsoft Yahei';
+  font-size: 14px;
+  color: #eee;
+  margin: 10px auto;
+}
+
+.theme-cool #bodyer #info-panel p{
+  color: rgba(255, 255, 255, 0.8);
+}
+.theme-simple  #bodyer #info-panel p{
+  color: rgba(0, 0, 0, 0.6);
+}
+
+ .app-feedback{
+  font-size: 14px;
+  color: #eee;
+  margin-top: 16px;
+}
+
+.theme-cool .app-feedback{
+  color: #fff;
+}
+.theme-simple .app-feedback{
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.theme-cool .app-feedback .iconfont{
+  color:  #FFFFFF;
+}
+.theme-simple  .app-feedback .iconfont{
+  color:  #999999;
+}
+
+ .app-feedback a{
+  color: #eee;
+  text-decoration: none;
+  padding: 0 6px;
+}
+
+.theme-simple  .app-feedback a{
+  color: rgba(0, 0, 0, 0.8);
+}
+
+ .app-feedback a:hover i,
+ .app-feedback a:active i {
+  color: #f9dd06;
+}
+
+ #bodyer #app-version-panel{
+  text-align: center;
+
+  font-family: 'Microsoft Yahei';
+  font-size: 24px;
+  line-height: 108px;
+
+  height: 132px;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+
+.theme-cool  #bodyer #app-version-panel{
+  color: #fff;
+  
+  background: #1E2647;
+
+}
+.theme-simple #bodyer #app-version-panel{
+  color: rgba(0, 0, 0, 0.8);
+}
+
+ #bodyer #action-panel{
+  width: 100%;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: 'Microsoft Yahei';
+  font-size: 20px;
+
+  cursor: pointer;
+  border-top: 1px solid #F2F2F2;
+}
+
+.theme-cool  #bodyer #action-panel{
+  background: #2D3960;
+  border-top: none;
+}
+
+.theme-simple #bodyer #action-panel{
+  background: rgba(255, 255, 255, 0.9);
+}
+
+
+ #download,  #complete-btn{
+  width: 180px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 20px;
+
+  background: linear-gradient(90deg, #51D0FE 0%, #38A8FE 71%);
+  box-shadow: 0px 4px 12px 0px rgba(44, 135, 204, 0.1),0px 4px 12px 0px rgba(0, 153, 229, 0.3);
+  font-size: 14px;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.theme-cool   #download, .theme-cool  #complete-btn{
+  color: #FFFFFF;
+  background: #39A8FF;
+  box-shadow: none;
+}
+
+.theme-simple  #download, .theme-simple  #complete-btn{
+  color: #38A8FE;
+  background: #FFFFFF;
+  box-shadow: none;
+  border: 1px solid #38A8FE;
+}
+
+ #download{
+  font-family: 'Microsoft Yahei';
+  cursor: pointer;
+  transition: color .3s ease-in-out;
+}
+
+
+ #download.inactive{
+  color: #ccc;
+  cursor: initial;
+}
+
+ #complete-btn{
+  display: none;
+  cursor: pointer;
+}
+

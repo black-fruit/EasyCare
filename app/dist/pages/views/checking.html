@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <!-- 该页面主要用户对使用环境的检测 -->
+  <head>
+    <meta charset="UTF-8">
+    <title>班级优化大师</title>
+    
+    <script>
+      try {
+        window.initFrame();
+      } catch(e) {}
+    </script>
+    <link rel="stylesheet" type="text/css" href="../theme/css/prechecking.css">
+  </head>
+  <body>
+    <img id="btn-close" src="../theme/images/common/close.png"/>
+    <div id="tip">
+      <span></span>
+    </div>
+  </body>
+  
+  <!-- 引入 Jquery 库 -->
+  <script type="text/javascript">
+    if (typeof module === 'object') {window.module = module; module = undefined;}
+  </script>
+  <script type="text/javascript" src="../js/vendor/jquery/jquery.min.js"></script>
+  <script type="text/javascript">
+    if(window.module){
+      module = window.module;
+    }
+  </script>
+
+  <script type="text/javascript">
+    window.remote = require('electron').remote;
+    window.ipc = require('electron').ipcRenderer;
+
+    window.config = remote.getGlobal('config');
+    window.logger = remote.getGlobal('log');
+  </script>
+
+  <script type="text/javascript" src="../js/pcChecking.js"></script>
+</html>

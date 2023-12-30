@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+  <title>班级优化大师-抓住孩子的每一课闪光点</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  
+  <script>
+    try {
+      window.initFrame();
+    } catch(e) {}
+  </script>
+  <link href="../theme/css/honor-main.css" rel="stylesheet" type="text/css" />
+
+  <script>
+      var _faq = _faq || [];  
+      window.faq = _faq;  
+      (function() {
+      var _appId = '6aa38563edc4a006bf940d65da5b0706';
+      var u = 'https://friday.cvte.com/agent/sdk/js/v2/fa.js?_appId=' + _appId;
+      var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+      g.type = 'text/javascript'; g.async = true; g.defer = true;
+      g.src = u;
+      s.parentNode.insertBefore(g, s);
+      _faq.push(['setEnv', {
+        sysVer: '1.0'
+      }]);
+      /*var uidInfo = document.cookie.match(/uid=[0-9a-f]{32}/);
+      var uid = uidInfo ? uidInfo[0].slice(4) : 'nobody';
+      _faq.push(['setUser', {
+        id: uid
+      }]);*/
+      })();
+    </script>
+
+</head>
+<body style="background: transparent; margin: 0; height: 100%;" class="theme-childlike">
+
+<!-- content -->
+<div id='main-panel'>
+  <div id='header'>
+    <div class="img"></div>
+  </div>
+  <div id='bodyer'>
+    
+  </div>
+</div>
+
+  
+<script type="text/javascript">
+  if (typeof module === 'object') {window.module = module; module = undefined;}
+</script>
+
+<script type="text/javascript" src='../js/vendor/zepto/zepto.min.js'></script>
+
+
+<script type="text/javascript">
+  if(window.module){
+    module = window.module;
+  }
+</script>
+
+<script type="text/javascript">
+  window.remote = require('electron').remote;
+  window.config = remote.getGlobal('config');
+  window.logger = remote.getGlobal('log');
+
+  window.baseUrl = config['baseUrl'];
+  window.authUrl = config['authUrl'];
+  
+  window.appName = config['appName']
+  window.productId = config['productId'];
+  window.version = config['version'];
+
+  window.careReportId = config['careReportId'];
+</script>
+
+<script type="text/javascript">
+
+  /* 防止右键弹出菜单 */
+  window.addEventListener('contenxtmenu', function(event){
+    event.preventDefault();
+    return false;
+  },false);
+
+  document.addEventListener('contenxtmenu', function(event){
+    event.preventDefault();
+    return false;
+  },false);
+
+  /* 防止拖拽图片 */
+  document.addEventListener('dragover',function(event){
+    event.preventDefault();
+    return false;
+  },false);
+
+  document.addEventListener('drop',function(event){
+    event.preventDefault();
+    return false;
+  },false);
+
+  /* electron 专用写法 */
+  window.electron = require('electron');
+  window.ipc = require('electron').ipcRenderer;
+
+  var externalDisplay = null;
+  externalDisplay = electron.screen.getAllDisplays()[0];
+
+</script>
+
+<script type="text/javascript" src="../js/pcHonor.js"></script>
+
+<script type="text/javascript">
+  //针对虚拟键盘弹出，改变work area，有可能导致窗口大小发生变化导致显示错误的问题进行处理
+    $(window).on('resize', function(){
+
+      clearTimeout(window.resizeProcess);
+
+      window.resizeProcess = setTimeout(function(){
+        resizeMainContentPanel();
+      }, 50);    
+    });
+
+    resizeMainContentPanel();    
+
+    function resizeMainContentPanel(){
+      var windowHeight = $(window).height();
+
+      var headerHeight = $('#header').height();
+      var controlPanelHeight = $('.control-panel').height();
+
+      if(windowHeight < headerHeight + controlPanelHeight){
+        return false;
+      }
+
+      var borderHeight = 2;
+      var mainContentPanelHeight = windowHeight - headerHeight - controlPanelHeight - borderHeight;
+      
+      $('.main-content-panel').height(mainContentPanelHeight);    
+    }
+</script>
+
+</body>
+</html>

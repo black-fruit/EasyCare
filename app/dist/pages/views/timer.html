@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+  <title>班级优化大师-抓住孩子的每一课闪光点</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  
+  <script>
+    try {
+      window.initFrame();
+    } catch(e) {}
+  </script>
+    <script>
+      var _faq = _faq || [];   
+      window.faq = _faq; 
+      (function() {
+      var _appId = '6aa38563edc4a006bf940d65da5b0706';
+      var u = 'https://friday.cvte.com/agent/sdk/js/v2/fa.js?_appId=' + _appId;
+      var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+      g.type = 'text/javascript'; g.async = true; g.defer = true;
+      g.src = u;
+      s.parentNode.insertBefore(g, s);
+      _faq.push(['setEnv', {
+        sysVer: '1.0'
+      }]);
+      })();
+
+    </script>
+
+    <script type="text/javascript">
+    window.remote = require('electron').remote;
+    window.config = remote.getGlobal('config');
+    window.logger = remote.getGlobal('log');
+
+    window.baseUrl = config['baseUrl'];
+    window.authUrl = config['authUrl'];
+    
+    window.appName = config['appName']
+    window.productId = config['productId'];
+    window.version = config['version'];
+
+    window.careReportId = config['careReportId'];
+  </script>
+</head>
+<body style="position: relative;" class="theme-childlike">
+
+  <div id="main-panel">
+    <div id="header">
+      <span class="title">计时器</span>
+      <i class="icon-subjects-delete close-btn"></i>
+    </div>
+    <div id="bodyer">
+      <div id="btns-group">
+        <div id="btn-counter" class="selected">秒表</div><div id="btn-count-down">倒计时</div>
+      </div>
+      <div class="panels">
+        <div id="panel-counter" class="active">
+          <span id="counter-hour" class="number">00</span>
+          <span class="split">:</span>
+          <span id="counter-min"  class="number">00</span>
+          <span class="split">:</span>
+          <span id="counter-sec"  class="number">00</span>
+        </div>
+        <div id="panel-count-down" class="inactive">
+          <div class="panel-mins">
+            <div class="panel-mins-h">
+              <div class="btn-plus">
+                <i class="action-icon icon-plus"></i>
+              </div>
+              <div class="number number-background">
+                0
+              </div>
+              <div class="btn-minus">
+                <i class="action-icon icon-minus"></i>
+              </div>
+            </div>
+            <div class="panel-mins-l">
+              <div class="btn-plus">
+                <i class="action-icon icon-plus"></i>
+              </div>
+              <div class="number number-background">
+                0
+              </div>
+              <div class="btn-minus">
+                <i class="action-icon icon-minus"></i>
+              </div>
+            </div>
+          </div>
+          <span class="split">:</span>
+          <div class="panel-secs">
+            <div class="panel-secs-h">
+              <div class="btn-plus">
+                <i class="action-icon icon-plus"></i>
+              </div>
+              <div class="number number-background">
+                0
+              </div>
+              <div class="btn-minus">
+                <i class="action-icon icon-minus"></i>
+              </div>
+            </div>
+            <div class="panel-secs-l">
+              <div class="btn-plus">
+                <i class="action-icon icon-plus"></i>
+              </div>
+              <div class="number number-background">
+                0
+              </div>
+              <div class="btn-minus">
+                <i class="action-icon icon-minus"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="actions-panel">
+        <div id="ready" class="active">
+          <div id="start" class="action-btn">开始</div>
+        </div>
+        <div id="running" class="inactive">
+          <div id="pause" class="action-btn">暂停</div>
+          <div id="reset" class="action-btn">重新开始</div>
+        </div>
+      </div>
+      <div class="hidden-source">
+        <audio id="audio-counter-end" src="../theme/audio/counter-end.mp3" preload></audio>
+        <audio id="audio-counter" src="../theme/audio/counter.mp3" preload></audio>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    if (typeof module === 'object') {window.module = module; module = undefined;}
+  </script>
+  
+  <script type="text/javascript" src='../js/vendor/zepto/zepto.min.js'></script>
+  
+  <script type="text/javascript">
+    if(window.module){
+      module = window.module;
+    }
+  </script>
+
+  <script type="text/javascript">
+
+    /* 防止右键弹出菜单 */
+    window.addEventListener('contenxtmenu', function(event){
+      event.preventDefault();
+      return false;
+    },false);
+
+    document.addEventListener('contenxtmenu', function(event){
+      event.preventDefault();
+      return false;
+    },false);
+
+    /* 防止拖拽图片 */
+    document.addEventListener('dragover',function(event){
+      event.preventDefault();
+      return false;
+    },false);
+
+    document.addEventListener('drop',function(event){
+      event.preventDefault();
+      return false;
+    },false);
+
+    window.ipc = require('electron').ipcRenderer;
+
+    if(!!window.ipc === false){
+      window.ipc = require('ipc');
+    }
+
+  </script>
+  
+  <script type="text/javascript" src="../js/pcTimer.js"></script>
+</body>
+
+</html>

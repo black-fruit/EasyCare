@@ -1,0 +1,1 @@
+const Store=require("electron-store"),app=require("electron").app,store=new Store({cwd:app.getPath("cache"),name:"easicare"});module.exports=store;

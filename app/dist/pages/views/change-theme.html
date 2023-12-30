@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <!-- 更换皮肤 -->
+  <head>
+    <meta charset="UTF-8">
+    <title>班级优化大师</title>
+    
+    <script>
+      try {
+        window.initFrame();
+      } catch(e) {}
+    </script>
+  </head>
+  <body class="theme-childlike">
+
+    <div class="change-theme-modal-wrap">
+
+      <header id="header">
+        <i class="close-btn icon-closure-stroke"></i>
+      </header>
+      <section id="bodyer">
+        <div class="window-title">
+          <header class="title">请为您的帐号设置皮肤</header>
+          <p class="description">已为您选择适合您学段的风格</p>
+        </div>
+        <div class="theme-container">
+          <ul class="theme-ul">
+            <li class="theme-li" id="simple-li-container">
+              <div class="theme-li-container">
+                <header class="title">简约</header>
+                <p class="desc">适合初/高中授课</p>
+              </div>
+              <div class="img-container">
+                <img src="../theme/images/theme/theme-simple.png" alt="简约" class="img">
+                <div class="overlay"></div>
+                <div class="choose-container">
+                  <div class="choose-click"/>
+                </div>
+              </div>
+            </li>
+            <li class="theme-li" id="childlike-li-container">
+              <div class="theme-li-container">
+                <header class="title">童趣</header>
+                <p class="desc">适合小学授课</p>
+              </div>
+              <div class="img-container">
+                <img src="../theme/images/theme/theme-childlike.png"  alt="童趣" class="img">
+                <div class="overlay"></div>
+                <div class="choose-container">
+                  <div class="choose-click"/>
+                </div>
+              </div>
+            </li>
+            <li class="theme-li" id="cool-li-container">
+              <div class="theme-li-container">
+                <header class="title">炫彩</header>
+                <p class="desc"></p>
+              </div>
+              <div class="img-container">
+                <img src="../theme/images/theme/theme-cool.png" alt="炫彩" class="img">
+                <div class="overlay"></div>
+                <div class="choose-container">
+                  <div class="choose-click"/>
+                </div>
+              </div>
+            </li>
+          </ul>
+
+          <div class="change-theme-footer">
+            <button class="confirm-btn">确定</button>
+          </div>
+
+        </div>
+      </section>     
+      
+    </div>
+    
+  </body>
+
+    <!-- 引入 Jquery 库 -->
+  <script type="text/javascript">
+    if (typeof module === 'object') {window.module = module; module = undefined;}
+  </script>
+  <script type="text/javascript" src="../js/vendor/jquery/jquery.min.js"></script>
+  <script type="text/javascript">
+    if(window.module){
+      module = window.module;
+    }
+  </script>
+  <script type="text/javascript">
+    /* 防止右键弹出菜单 */
+		window.addEventListener('contextmenu', function(event){
+			event.preventDefault();
+			return false;
+		},false);
+
+		document.addEventListener('contextmenu', function(event){
+			event.preventDefault();
+			return false;
+		},false);
+
+		/* 防止拖拽图片 */
+		document.addEventListener('dragover',function(event){
+			event.preventDefault();
+			return false;
+		},false);
+
+		document.addEventListener('drop',function(event){
+			event.preventDefault();
+			return false;
+		},false);
+
+
+    window.remote = require('electron').remote;    
+    window.config = remote.getGlobal('config');
+    window.logger = remote.getGlobal('log');
+    window.ipc = require('electron').ipcRenderer;
+  </script>
+  <script  type="text/javascript" src="../js/pcChangeTheme.js"></script>
+</html>

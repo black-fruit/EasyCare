@@ -1,0 +1,127 @@
+@font-face {
+  font-family: 'iconfont';
+  src: url('../theme/font/iconfont/iconfont.woff2') format('woff2');
+}
+
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "iconfont";
+  font-weight: normal;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+ 
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.theme-cool .icon-ok:before { content: '\ea06'; } /* '' */
+.theme-cool .icon-care:before { content: '\e608'; } /* '' */
+.theme-cool .icon-teacher-tick:before { content: '\e63f'; } /* '' */
+.theme-cool .icon-subjects-delete:before { content: '\e651'; } /* '' */
+.theme-cool .icon-subjects-close:before { content: '\e642'; } 
+.theme-cool .icon-delete:before { content: '\ea20'; } /* '' */
+.theme-cool .icon-about:before { content: '\e656'; } /* '' */
+.theme-cool .icon-homework:before { content: '\ea23'; } /* '' */
+.theme-cool .icon-scanusers:before { content: '\e66e'; } /* '' */
+.theme-cool .icon-upload-btn:before { content: '\ea25'; } /* '' */
+.theme-cool .icon-eye:before { content: '\ea27'; } /* '' */
+.theme-cool .icon-criticism:before { content: '\e65f'; } /* '' */
+.theme-cool .icon-praise:before { content: '\e669'; } /* '' */
+.theme-cool .icon-export:before { content: '\ea2e'; } /* '' */
+.theme-cool .icon-chart-pie:before { content: '\e7f0'; } /* '' */
+.theme-cool .icon-honor:before { content: '\e663'; } /* '' */
+.theme-cool .icon-attendence-2:before { content: '\e659'; } /* '' */
+.theme-cool .icon-home-1:before { content: '\e662'; } /* '' */
+.theme-cool .icon-minimum-1:before { content: '\e666'; } /* '' */
+.theme-cool .icon-sort-by-score-1:before { content: '\ea39'; } /* '' */
+.theme-cool .icon-reverse:before { content: '\ea3b'; } /* '' */
+.theme-cool .icon-out:before { content: '\e668'; } /* '' */
+.theme-cool .icon-plus:before { content: '\e63c'; } /* '' */
+.theme-cool .icon-minus:before { content: '\e63d'; } /* '' */
+.theme-cool .icon-ok-bold:before { content: '\e63f'; } /* '' */
+.theme-cool .icon-attendance:before { content: '\e659'; } /* '' */
+.theme-cool .icon-report-order:before { content: '\ea41'; } /* '' */
+.theme-cool .icon-appraise-block:before { content: '\ea42'; } /* '' */
+.theme-cool .icon-search:before { content: '\e69f'; } /* '' */
+.theme-cool .icon-exam:before { content: '\ea43'; } /* '' */
+.theme-cool .icon-medal-report:before { content: '\e643'; } /* '' */
+.theme-cool .icon-star-o:before { content: '\e644'; } /* '' */
+.theme-cool .icon-appraise:before { content: '\ea46'; } /* '' */
+.theme-cool .icon-quick-group:before { content: '\e647'; } /* '' */
+.theme-cool .icon-edit-score:before { content: '\e660'; } /* '' */
+.theme-cool .icon-add-collection:before { content: '\e70a'; } /* '' */
+.theme-cool .icon-adjust-collection:before { content: '\e658'; } /* '' */
+.theme-cool .icon-minimum-2:before { content: '\ea4c'; } /* '' */
+.theme-cool .icon-status-complete:before { content: '\ea4d'; } /* '' */
+.theme-cool .icon-status-warning:before { content: '\e656'; } /* '' */
+.theme-cool .icon-report-1:before { content: '\e66b'; } /* '' */
+.theme-cool .icon-classroom-setting:before { content: '\e65e'; } /* '' */
+.theme-cool .icon-help-1:before { content: '\e661'; } /* '' */
+.theme-cool .icon-menu-1:before { content: '\e665'; } /* '' */
+.theme-cool .icon-back:before { content: '\e65b'; } /* '' */
+.theme-cool .icon-timer:before { content: '\e672'; } /* '' */
+.theme-cool .icon-tools:before { content: '\e675'; }
+.theme-cool .icon-back-2:before { content: '\ea0f'; } /* '' */
+.theme-cool .icon-honor-student:before { content: '\e664'; } /* '' */
+.theme-cool .icon-random:before { content: '\e66a'; } /* '' */
+.theme-cool .icon-care-2:before { content: '\e7bb'; } /* '' */
+.theme-cool .icon-voice:before { content: '\e701'; } 
+.theme-cool .icon-time-sort:before { content: '\e673'; } /* '' */
+.theme-cool .icon-sort-type-score:before { content: '\e670'; } /* '' */
+.theme-cool .icon-sort-type-name:before { content: '\e66f'; } /* '' */
+.theme-cool .icon-honor-random:before { content: '\e66a'; } /* '' */
+.theme-cool .icon-change-theme:before { content: '\e65c'; } /* '' */
+.theme-cool .icon-avatar:before { content: '\e7bb'; } /* '' */
+.theme-cool .icon-close:before { content: '\e651'; } /* '' */
+.theme-cool .icon-reverse-1:before { content: '\e6a8'; } /* '' */
+.theme-cool .icon-criticism-report:before { content: '\e671'; } /* '' */
+.theme-cool .icon-praise-report:before { content: '\e600'; } /* '' */
+.theme-cool .icon-theme-ok:before { content: '\ea0a'; } /* '' */
+.theme-cool .icon-reward:before { content: '\e6c9'; } 
+.theme-cool .icon-noise:before { content: '\e678'; } 
+.theme-cool .icon-lucky:before { content: '\e6b3'; } 
+.theme-cool .icon-continue:before { content: '\e679'; } 
+.theme-cool .icon-group:before { content: '\e6b1'; } 
+.theme-cool .icon-reset:before { content: '\e66c'; } 
+.theme-cool .icon-arrow-left:before { content: '\ea0d'; } 
+.theme-cool .icon-smart-sport:before { content: '\e60b'; } 
+
+.theme-cool .icon-arrow-down:before { content: '\e652'; } 
+.theme-cool .icon-arrow-left:before { content: '\e653'; } 
+.theme-cool .icon-smart-right:before { content: '\e654'; } 
+.theme-cool .icon-closure-stroke:before { content: '\e657'; } 
+.theme-cool .icon-selected-small:before { content: '\e65a'; } 
+
+.theme-cool .icon-return:before { content: '\e65d'; } 
+.theme-cool .icon-arrow-up:before { content: '\e667'; } 
+.theme-cool .icon-settings:before { content: '\e66d'; } 
+.theme-cool .icon-settings-stroke:before { content: '\e67a'; } 
+.theme-cool .icon-selected:before { content: '\e67b'; } 
+.theme-cool .icon-arrow-right:before { content: '\e640'; } 
+
+.theme-cool .icon-minimize:before { content: '\e641'; } 
+.theme-cool .icon-closure:before { content: '\e642'; } 
+.theme-cool .icon-download:before { content: '\e645'; } 
+.theme-cool .icon-increase:before { content: '\e646'; } 
+.theme-cool .icon-return-arrow-left:before { content: '\e64c'; } 
+.theme-cool .icon-introduce:before { content: '\e64d'; } 
+.theme-cool .icon-refresh:before { content: '\e64e'; } 
+
+.theme-cool .icon-add:before { content: '\e6d5'; } 

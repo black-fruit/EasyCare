@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <!-- 关于我们 软件更新 -->
+  <head>
+    <meta charset="UTF-8">
+    <title>班级优化大师</title>
+    
+    <script>
+      try {
+        window.initFrame();
+      } catch(e) {}
+    </script>
+
+    <link rel="stylesheet" type="text/css" href="../theme/css/about.css">
+  </head>
+  <body class="theme-childlike">
+    <div id="bodyer">
+      <div id="header">
+        <span>关于我们</span>
+        <div id="close-btn">
+          <i class="close-btn iconfont">&#xe657;</i>
+          <i class="close-btn-simple iconfont">&#xe657;</i>
+        </div>
+        
+      </div>
+      <div id="info-panel">
+        <div class='version-text'>班级优化大师<span id="currentVersion"></span></div>
+        <p>Copyright © 2011-<span id='copyright-year'>2021</span> GuangZhou Shirui. All Rights Reserved.</p>
+        <div class="app-feedback" id="j-feedback"> 
+          <a href="http://system.eduyun.cn/bmp-web/getSpAppDetail_index?appId=ONDcKLPi3oShLv1S7QaQEt3YBWl6SM2r&userId="><i class="iconfont">&#xe69c;</i> 评价</a> |
+          <a href="http://system.eduyun.cn/bmp-web/sysAppReport/appReport?appId=ONDcKLPi3oShLv1S7QaQEt3YBWl6SM2r&userId="><i class="iconfont">&#xe794;</i> 举报</a>
+        </div>
+      </div>
+      <div id="app-version-panel">
+        <div id="conclusion">当前是最新版本</div>
+        <div id="progress-bar">
+          <div id="future-version-panel">
+            <img src="../theme/images/about/ic_new.png"/>
+            <span id="future-version"></span>
+            <span id="progress"></span>
+          </div>
+        </div>
+      </div>
+      <div id="action-panel">
+        <div id="download">
+          立即安装
+        </div>
+        <div id="complete-btn">
+          知道了
+        </div>
+      </div>
+    </div>
+  </body>
+
+    <!-- 引入 Jquery 库 -->
+  <script type="text/javascript">
+    if (typeof module === 'object') {window.module = module; module = undefined;}
+  </script>
+  <script type="text/javascript" src="../js/vendor/jquery/jquery.min.js"></script>
+  <script type="text/javascript">
+    if(window.module){
+      module = window.module;
+    }
+  </script>
+  <script type="text/javascript">
+    window.remote = require('electron').remote;
+    window.config = remote.getGlobal('config');
+    window.logger = remote.getGlobal('log');
+    window.ipc = require('electron').ipcRenderer;
+  </script>
+
+<script  type="text/javascript" src="../js/pcAbout.js"></script>
+</html>

@@ -1,0 +1,216 @@
+@font-face {
+  font-family: 'iconfont';
+  src: url('../../theme/font/iconfont/iconfont.woff2') format('woff2');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* 由于PC版自带chrome内核，光明正大地修改滚动条样式 */
+::-webkit-scrollbar {width: 6px;height:6px;}
+::-webkit-scrollbar-track-piece{background-color: #39A8FF;margin: 26px;}
+::-webkit-scrollbar-thumb{background: rgb(0, 130, 197);min-height: 150px;min-width: 150px;border-radius: 10px;}
+::-webkit-scrollbar-thumb:vertical:hover{background: #555555}
+::-webkit-scrollbar-thumb:horizontal:hover{background: #555555}
+
+html{
+  height: 100%;
+  overflow: hidden;
+}
+
+
+body{
+  margin: 0;
+
+  height: 100%;
+
+  /* 防止第三方样式引入白底 */
+  background: transparent !important;
+  border-radius: 8px;
+}
+
+@font-face {
+  font-family: 'PingFangSC-Regular';
+  src: url('../../theme/font/PingFangSC/PingFangSC-Regular.woff') format('woff');
+}
+
+* {
+  font-family: 'PingFangSC-Regular';
+}
+
+img, a {
+  -webkit-user-drag: none;
+}
+
+#main-panel{
+  display: block;
+  user-select: none;
+  width: 968px;
+  height: 640px;
+
+  border-radius: 8px;
+
+  background: url('../images/login/img_login_bg.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+
+  border-image: linear-gradient(180deg, #FFFFFF 0%, #D3DEE5 100%) 1;
+
+  margin: 32px auto;
+  overflow: hidden;
+  box-shadow: 0px 8px 32px 0px rgba(44, 135, 204, 0.2);
+}
+
+#header{
+  -webkit-user-select: none;
+  -webkit-app-region: drag;
+  height: 56px;
+  padding: 0 30px;
+  box-sizing: border-box;
+}
+
+.content-panel{
+  position: relative;
+  left: 8px;
+  -webkit-app-region: no-drag;
+  display: block;
+  height: 56px;
+  float: right;
+  list-style: none;
+}
+
+.content-panel li {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+  width: 116px;
+  height: 32px;
+  line-height: 32px;
+
+  margin-top: 20px;
+  text-align: center;
+  cursor: pointer;
+  margin-right: 8px;
+  border-radius: 8px 8px 0 0;
+}
+
+.content-panel li:last-child {
+  width: 128px;
+}
+
+.content-panel li:hover{
+  border-radius: 2px;
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.content-panel li.active {
+  height: 44px;
+  line-height: 44px;
+  margin-top: 12px;
+  padding: 0 16px 0px;
+  color: #38A9FF;
+  background: #FFFFFF;
+}
+
+.content-panel li.active::before{
+  position: absolute;
+  left: -16px;
+  bottom: 0;
+  width: 16px;
+  height: 16px;
+  border-radius: 8px;
+  box-shadow: 8px 8px 0 #FFFFFF;
+  content: "";
+}
+
+.content-panel li.active::after{
+  position: absolute;
+  right: -16px;
+  bottom: 0;
+  width: 16px;
+  height: 16px;
+  border-radius: 8px;
+  box-shadow: -8px 8px 0 #FFFFFF;
+  content: "";
+}
+
+.content-panel li a{
+  display: inline-block;
+  position: relative;
+
+  color: rgba(0, 0, 0, 0.6);  
+
+  font-size: 14px;
+  font-family: 'Microsoft YaHei';
+}
+
+.content-panel li.active a{
+  color: #38A9FF;
+}
+
+.logo{
+  float: left;
+  margin-top: 20px;
+  margin-right: 10px;
+  width: 163px;
+  height: 22px;
+  background: transparent url('../../theme/images/common/logo-new.png') no-repeat center center;
+  background-size: 163px 22px;
+}
+
+.operation-icon {
+  font-size: 20px;
+  position: relative;
+  margin-right: 6px;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.content-panel li.active .operation-icon{
+  color: #38A9FF;
+}
+
+#product-intro-panel,#download-apps-panel{
+  display: none;
+}
+
+
+.close-btn-wrap {
+  float: right;
+  position: relative;
+  top: 21px;
+  left: 8px;
+  width: 32px;
+  height: 32px;
+  -webkit-app-region: no-drag;
+  cursor: pointer;
+  text-align: center;
+  padding-top: 4px;
+  border-radius: 2px;
+}
+
+
+.close-btn-wrap:hover{
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.close-btn-wrap .close-icon{
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 16px;
+}
+
+.close-btn-wrap img {
+  width: 32px;
+  height: 32px;
+}
+
+
+
+

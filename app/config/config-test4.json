@@ -1,0 +1,20 @@
+{
+  "referer": "https://care-test4.test.seewo.com",
+  "serverUrl": "https://care-test4.test.seewo.com",
+  "apiUrl": "https://care-test4.test.seewo.com/easicare",
+  "authUrl": "http://id.test.seewo.com",
+  "adminUrl": "https://account.test.seewo.com/seewo-admin",
+  "careReportId": "d11a6c54153246482bc8d49dd9c0ef0a",
+  "capmId": "1aefcd82889b9bb58200b0790236e722daade4d8",
+  "capmUrl": "https://apm.gz.cvte.cn/grail/api/report/raw",
+  "tencentSSOUrl": "https://sso.qq.com/statics/login-pc/index.html?app=700649",
+  "SingleSignService": {
+    "url": "http://local.id.seewo.com",
+    "basePort": 24300,
+    "portScope": 6
+  },
+  "entirePackageCode": "EasiCare",
+  "interceptCookies": [
+    "pt_token"
+  ]
+}

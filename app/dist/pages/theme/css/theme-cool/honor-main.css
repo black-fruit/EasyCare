@@ -1,0 +1,61 @@
+html{
+  height: 100%;
+}
+
+body{
+  margin: 0;
+
+  height: 100%;
+
+  /* 防止第三方样式引入白底 */
+  background: transparent !important;
+
+  overflow: hidden;
+}
+
+.theme-cool img{
+  image-rendering: -webkit-optimize-contrast;
+}
+
+.theme-cool #main-panel{
+  display: block;
+
+  width: 380px;
+  margin: auto;
+
+  border-radius: 4px;
+  box-shadow: 0 1px 16px 0 rgba(0,0,0,0.20);
+}
+
+.theme-cool #header{
+  -webkit-user-select: none;
+  -webkit-app-region: drag;
+
+  height: 120px;
+  background-color: transparent;
+  overflow: hidden;
+  border-top: 1px solid #122041;
+  border-left: 1px solid #122041;
+  border-right: 1px solid #122041;
+
+  background-color: #122041;
+  border-radius: 4px 4px 0px 0px;
+}
+
+.theme-cool #header .img{
+  display: block;
+  position: relative;
+  background-image: url('../../images/honor/banner-honor-simple.png');
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.theme-cool #bodyer {
+  background-color: #122041;
+  border-radius: 0px 0px 4px 4px;
+  box-shadow: 0 1px 16px 0 rgba(0,0,0,0.20);
+  border: 1px solid #122041;
+  border-top: none;
+}

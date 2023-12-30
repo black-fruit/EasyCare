@@ -1,0 +1,57 @@
+html{
+	height: 100%;
+}
+
+body{
+	margin: 0;
+
+	height: 100%;
+	
+	/* 防止第三方样式引入白底 */
+	background: transparent !important;
+
+	overflow: hidden;
+}
+
+.theme-childlike img{
+	image-rendering: -webkit-optimize-contrast;
+}
+
+.theme-childlike #main-panel{
+	display: block;
+
+	width: 380px;	
+	margin: auto;
+
+	border-radius: 4px;
+}
+
+.theme-childlike #header{
+	-webkit-user-select: none;
+	-webkit-app-region: drag;
+
+	height: 120px;
+	background-color: transparent;	
+	overflow: hidden;
+
+	background-color: #39A8FF;
+	border-radius: 4px 4px 0px 0px;
+}
+
+.theme-childlike #header .img{
+	display: block;
+	position: relative;	
+	background-image: url('../../images/honor/banner-honor-childlike.png');
+	background-position: center;
+	background-size: cover;
+	height: 100%;
+	width: 100%;
+}
+
+.theme-childlike #bodyer {	
+	background-color: #E5F4FC;
+	border-radius: 0px 0px 4px 4px;
+
+	border: 1px solid #e6e6e6;
+	border-top: none;
+}

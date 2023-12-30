@@ -1,0 +1,171 @@
+@font-face {
+  font-family: 'iconfont';
+  src: url('../theme/font/iconfont/iconfont.woff2') format('woff2');
+}
+
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "iconfont";
+  font-weight: normal;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+ 
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.theme-childlike .icon-windows:before { content: '\e800'; } /* '' */
+.theme-childlike .icon-android:before { content: '\e801'; } /* '' */
+.theme-childlike .icon-apple:before { content: '\e802'; } /* '' */
+.theme-childlike .icon-cancel-circle:before { content: '\e803'; } /* '' */
+.theme-childlike .icon-cancel:before { content: '\e804'; } /* '' */
+.theme-childlike .icon-dollar:before { content: '\e805'; } /* '' */
+.theme-childlike .icon-ok:before { content: '\e806'; } /* '' */
+.theme-childlike .icon-right-big:before { content: '\e807'; } /* '' */
+.theme-childlike .icon-care:before { content: '\e608'; } /* '' */
+.theme-childlike .icon-attendance-1:before { content: '\e809'; } /* '' */
+.theme-childlike .icon-medal:before { content: '\e80a'; } /* '' */
+.theme-childlike .icon-qrcode:before { content: '\e80b'; } /* '' */
+.theme-childlike .icon-up-to-top:before { content: '\e80c'; } /* '' */
+.theme-childlike .icon-play:before { content: '\e80d'; } /* '' */
+.theme-childlike .icon-enter:before { content: '\e80e'; } /* '' */
+.theme-childlike .icon-mobile:before { content: '\e80f'; } /* '' */
+.theme-childlike .icon-chat:before { content: '\e810'; } /* '' */
+.theme-childlike .icon-qq:before { content: '\e811'; } /* '' */
+.theme-childlike .icon-teacher-tick:before { content: '\e63f'; } /* '' */
+.theme-childlike .icon-teacher-mobile:before { content: '\e813'; } /* '' */
+.theme-childlike .icon-nav-stick:before { content: '\e814'; } /* '' */
+.theme-childlike .icon-down-head:before { content: '\e815'; } /* '' */
+.theme-childlike .icon-up-head:before { content: '\e816'; } /* '' */
+.theme-childlike .icon-nav-arrow:before { content: '\e817'; } /* '' */
+.theme-childlike .icon-up-to-top-1:before { content: '\e818'; } /* '' */
+.theme-childlike .icon-score-download:before { content: '\e819'; } /* '' */
+.theme-childlike .icon-nav-arrow-1:before { content: '\e81a'; } /* '' */
+.theme-childlike .icon-send-score-active:before { content: '\e81b'; } /* '' */
+.theme-childlike .icon-subjects-delete:before { content: '\e6be'; } /* '' */
+.theme-childlike .icon-subjects-close:before { content: '\e642'; } 
+.theme-childlike .icon-score-upload:before { content: '\e81d'; } /* '' */
+.theme-childlike .icon-subjects-add:before { content: '\e81e'; } /* '' */
+.theme-childlike .icon-student-name:before { content: '\e81f'; } /* '' */
+.theme-childlike .icon-send-score:before { content: '\e820'; } /* '' */
+.theme-childlike .icon-delete:before { content: '\e821'; } /* '' */
+.theme-childlike .icon-notice:before { content: '\e822'; } /* '' */
+.theme-childlike .icon-homework:before { content: '\e823'; } /* '' */
+.theme-childlike .icon-scanusers:before { content: '\e636'; } /* '' */
+.theme-childlike .icon-upload-btn:before { content: '\e825'; } /* '' */
+.theme-childlike .icon-upload-bg:before { content: '\e826'; } /* '' */
+.theme-childlike .icon-eye:before { content: '\e827'; } /* '' */
+.theme-childlike .icon-criticism:before { content: '\e671'; } /* '' */
+.theme-childlike .icon-praise-o:before { content: '\e829'; } /* '' */
+.theme-childlike .icon-praise:before { content: '\e600'; } /* '' */
+.theme-childlike .icon-criticism-o:before { content: '\e82b'; } /* '' */
+.theme-childlike .icon-sort:before { content: '\e82c'; } /* '' */
+.theme-childlike .icon-sort-down:before { content: '\e82d'; } /* '' */
+.theme-childlike .icon-export:before { content: '\e82e'; } /* '' */
+.theme-childlike .icon-chart-pie:before { content: '\e7f0'; } /* '' */
+.theme-childlike .icon-report:before { content: '\e830'; } /* '' */
+.theme-childlike .icon-back:before { content: '\e622'; } /* '' */
+.theme-childlike .icon-about:before { content: '\e613'; } /* '' */
+.theme-childlike .icon-honor:before { content: '\e624'; } /* '' */
+.theme-childlike .icon-timer:before { content: '\e625'; } /* '' */
+.theme-childlike .icon-tools:before { content: '\e6d8'; }
+.theme-childlike .icon-attendence-2:before { content: '\e60a'; } /* '' */
+.theme-childlike .icon-sort-2:before { content: '\e836'; } /* '' */
+.theme-childlike .icon-criticism-2:before { content: '\e837'; } /* '' */
+.theme-childlike .icon-random:before { content: '\e628'; } /* '' */
+.theme-childlike .icon-care-2:before { content: '\e608'; } /* '' */
+.theme-childlike .icon-voice:before { content: '\e700'; } /* '' */
+.theme-childlike .icon-narrow-down-2:before { content: '\e83a'; } /* '' */
+.theme-childlike .icon-group-action:before { content: '\e83b'; } /* '' */
+.theme-childlike .icon-student-action:before { content: '\e83c'; } /* '' */
+.theme-childlike .icon-reset-1:before { content: '\e83d'; } /* '' */
+.theme-childlike .icon-home-1:before { content: '\e62e'; } /* '' */
+.theme-childlike .icon-minimum-1:before { content: '\e62f'; } /* '' */
+.theme-childlike .icon-sort-by-score-1:before { content: '\e840'; } /* '' */
+.theme-childlike .icon-report-1:before { content: '\e631'; } /* '' */
+.theme-childlike .icon-help-1:before { content: '\e632'; } /* '' */
+.theme-childlike .icon-praise-2:before { content: '\e843'; } /* '' */
+.theme-childlike .icon-reverse-1:before { content: '\e6a8'; } /* '' */
+.theme-childlike .icon-multi-persons-1:before { content: '\e845'; } /* '' */
+.theme-childlike .icon-back-2:before { content: '\ea0d'; } /* '' */
+.theme-childlike .icon-out:before { content: '\e638'; } /* '' */
+.theme-childlike .icon-sort-type-name:before { content: '\e639'; } /* '' */
+.theme-childlike .icon-sort-type-score:before { content: '\e63b'; } /* '' */
+.theme-childlike .icon-plus:before { content: '\e63c'; } /* '' */
+.theme-childlike .icon-minus:before { content: '\e63d'; } /* '' */
+.theme-childlike .icon-classroom-setting:before { content: '\e63e'; } /* '' */
+.theme-childlike .icon-ok-bold:before { content: '\e63f'; } /* '' */
+.theme-childlike .icon-attendance:before { content: '\e60a'; } /* '' */
+.theme-childlike .icon-report-order:before { content: '\e84f'; } /* '' */
+.theme-childlike .icon-appraise-block:before { content: '\e850'; } /* '' */
+.theme-childlike .icon-exam:before { content: '\e851'; } /* '' */
+.theme-childlike .icon-medal-report:before { content: '\e643'; } /* '' */
+.theme-childlike .icon-star-o:before { content: '\e644'; } /* '' */
+.theme-childlike .icon-appraise:before { content: '\e854'; } /* '' */
+.theme-childlike .icon-search:before { content: '\e6f2'; } /* '' */
+.theme-childlike .icon-quick-group:before { content: '\e647'; } /* '' */
+.theme-childlike .icon-edit-score:before { content: '\e648'; } /* '' */
+.theme-childlike .icon-add-collection:before { content: '\e649'; } /* '' */
+.theme-childlike .icon-adjust-collection:before { content: '\e62a'; } /* '' */
+.theme-childlike .icon-time-sort:before { content: '\e64a'; } /* '' */
+.theme-childlike .icon-menu-1:before { content: '\e64b'; } /* '' */
+.theme-childlike .icon-honor-random:before { content: '\e66a'; } /* '' */
+.theme-childlike .icon-minimum-2:before { content: '\e62f'; } /* '' */
+.theme-childlike .icon-honor-student:before { content: '\e64f'; } /* '' */
+.theme-childlike .icon-home-2:before { content: '\e85f'; } /* '' */
+.theme-childlike .icon-status-complete:before { content: '\e860'; } /* '' */
+.theme-childlike .icon-status-warning:before { content: '\e656'; } /* '' */
+.theme-childlike .icon-change-theme:before { content: '\e655'; } /* '' */
+.theme-childlike .icon-avatar:before { content: '\e608'; } /* '' */
+.theme-childlike .icon-close:before { content: '\e6be'; } /* '' */
+.theme-childlike .icon-praise-report:before { content: '\e600'; } /* '' */
+.theme-childlike .icon-criticism-report:before { content: '\e671'; } /* '' */
+.theme-childlike .icon-theme-ok:before { content: '\ea0a'; } /* '' */
+.theme-childlike .icon-reward:before { content: '\e6cc'; } 
+.theme-childlike .icon-noise:before { content: '\e676'; } 
+.theme-childlike .icon-lucky:before { content: '\e6d9'; } 
+.theme-childlike .icon-continue:before { content: '\e6da'; } 
+.theme-childlike .icon-group:before { content: '\e6b2'; } 
+.theme-childlike .icon-reset:before { content: '\e6ca'; } 
+.theme-childlike .icon-arrow-left:before { content: '\ea0d'; } 
+.theme-childlike .icon-smart-sport:before { content: '\e607'; } 
+ 
+.theme-childlike .icon-arrow-down:before { content: '\e652'; } 
+.theme-childlike .icon-arrow-left:before { content: '\e653'; } 
+.theme-childlike .icon-smart-right:before { content: '\e654'; } 
+.theme-childlike .icon-closure-stroke:before { content: '\e657'; } 
+.theme-childlike .icon-selected-small:before { content: '\e65a'; } 
+
+.theme-childlike .icon-return:before { content: '\e65d'; } 
+.theme-childlike .icon-arrow-up:before { content: '\e667'; } 
+.theme-childlike .icon-settings:before { content: '\e66d'; } 
+.theme-childlike .icon-settings-stroke:before { content: '\e67a'; } 
+.theme-childlike .icon-selected:before { content: '\e67b'; } 
+.theme-childlike .icon-arrow-right:before { content: '\e640'; } 
+
+.theme-childlike .icon-minimize:before { content: '\e641'; } 
+.theme-childlike .icon-closure:before { content: '\e642'; } 
+.theme-childlike .icon-download:before { content: '\e645'; } 
+.theme-childlike .icon-increase:before { content: '\e646'; } 
+.theme-childlike .icon-return-arrow-left:before { content: '\e64c'; } 
+.theme-childlike .icon-introduce:before { content: '\e64d'; } 
+.theme-childlike .icon-refresh:before { content: '\e64e'; } 
+
+.theme-childlike .icon-add:before { content: '\e6d5'; } 

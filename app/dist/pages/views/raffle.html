@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+  <title>班级优化大师-抓住孩子的每一课闪光点</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  
+  <script>
+    try {
+      window.initFrame();
+    } catch(e) {}
+  </script>
+</head>
+<body style="position: relative" class="theme-childlike">
+
+  <div id="main-panel">
+    <div id="header">
+      <span class="title">随机抽选</span>
+      <span class='icon-container'>
+        <span class='mini-btn'><i class="mini-i"></i></span>
+        <i class="icon-subjects-delete close-btn"></i>
+      </span>
+    </div>
+    <div id="animation-bodyer">
+      <div id="animation-panel">
+        <img class="avatar" src="#" />
+        <div class="content">
+
+        </div>
+      </div>
+      <div class="actions-panel">
+        <div id="reRaffle-btn" class="action-btn">重新抽选</div>
+        <div id="setMedal-btn" class="action-btn">发送点评</div>
+      </div>
+    </div>
+    <div id="amount-setting-bodyer" class="hidden">
+      <div id="amount-setting-panel">
+        <div class="title">请选择人数</div>
+        <div class="btn-setting btn-minus">
+          <i class="icon-minus"></i>
+        </div>
+        <div id="amount-value">1</div>
+        <div class="btn-setting btn-add">
+          <i class="icon-plus"></i>
+        </div>
+      </div>
+      <div class="actions-panel">
+        <div id="raffle-btn" class="action-btn">开始抽选</div>
+      </div>
+    </div>
+    <div class="hidden-source">
+      <audio src="../theme/audio/raffle-2.mp3" preload></audio>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    if (typeof module === 'object') {window.module = module; module = undefined;}
+  </script>
+
+  <script type="text/javascript" src='../js/vendor/zepto/zepto.min.js'></script>
+
+  <script type="text/javascript">
+    if(window.module){
+      module = window.module;
+    }
+  </script>
+
+  <script type="text/javascript">
+
+    /* 防止右键弹出菜单 */
+    window.addEventListener('contenxtmenu', function(event){
+      event.preventDefault();
+      return false;
+    },false);
+
+    document.addEventListener('contenxtmenu', function(event){
+      event.preventDefault();
+      return false;
+    },false);
+
+    /* 防止拖拽图片 */
+    document.addEventListener('dragover',function(event){
+      event.preventDefault();
+      return false;
+    },false);
+
+    document.addEventListener('drop',function(event){
+      event.preventDefault();
+      return false;
+    },false);
+
+    window.ipc = require('electron').ipcRenderer;
+
+    if(!!window.ipc === false){
+      window.ipc = require('ipc');
+    }
+
+  </script>
+
+  <script type="text/javascript" src="../js/pcRaffle.js"></script>
+</body>
+</html>

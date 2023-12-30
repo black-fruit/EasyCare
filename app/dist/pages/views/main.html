@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+  <title>班级优化大师-抓住孩子的每一课闪光点</title>
+  <meta name="keywords" content="班级优化大师、班级管理、课堂管理、学生管理、希沃、Seewo"/>
+  <meta name="description" content="希沃班级优化大师，国内首款先进课堂管理软件，专注K12阶段课堂教育，提供高效班级管理策略，创建积极活跃课堂氛围。班级优化大师使教与学更轻松有趣，家长参与教学更省心。"/>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  
+  <script>
+    try {
+      window.initFrame();
+    } catch(e) {}
+  </script>
+  <script>
+    var _faq = _faq || []; 
+
+    (function() {
+    var _appId = '6aa38563edc4a006bf940d65da5b0706';
+    var u = 'https://friday.cvte.com/agent/sdk/js/v2/fa.js?_appId=' + _appId;
+    var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+    g.type = 'text/javascript'; g.async = true; g.defer = true;
+    g.src = u;
+    s.parentNode.insertBefore(g, s);
+    _faq.push(['setEnv', {
+      sysVer: '1.0'
+    }]);
+    window.faq = _faq;   
+    })();
+  </script>
+    
+</head>
+<body class='theme-childlike'>
+
+<!-- content -->
+<div id='root'></div>
+
+<div id='out-of-parent-modal-root'></div>
+
+<script type="text/javascript" src='../js/vendor/zepto/zepto.min.js'></script>
+<script type="text/javascript" src='../js/vendor/moment/moment.min.js'></script>
+<script type="text/javascript" src='../js/vendor/recorder/recorder.mp3.min.js'></script>
+
+<script type="text/javascript">
+
+  window.remote = require('electron').remote;
+  window.config = remote.getGlobal('config');
+  window.logger = remote.getGlobal('log');
+
+  window.baseUrl = config['baseUrl'];
+  window.authUrl = config['authUrl'];
+  
+  window.appName = config['appName']
+  window.productId = config['productId'];
+  window.version = config['version'];
+
+  window.careReportId = config['careReportId'];
+</script>
+<script type="text/javascript">
+
+  /* 防止右键弹出菜单 */
+  window.addEventListener('contenxtmenu', function(event){
+    event.preventDefault();
+    return false;
+  },false);
+
+  document.addEventListener('contenxtmenu', function(event){
+    event.preventDefault();
+    return false;
+  },false);
+
+  /* 防止拖拽图片 */
+  document.addEventListener('dragover',function(event){
+    event.preventDefault();
+    return false;
+  },false);
+
+  document.addEventListener('drop',function(event){
+    event.preventDefault();
+    return false;
+  },false);
+
+  /* electron 接口 */
+
+  window.isPcStyle = true; //PC端标志
+  
+  window.ipc = require('electron').ipcRenderer;
+
+  if(!!window.ipc === false){
+    window.ipc = require('ipc');
+  }
+
+  navigator.serviceWorker.ready.then(function(registration) {
+    registration.active.postMessage({type: 'CONFIG', config: window.config})
+  });
+  
+</script>
+
+<script type="text/javascript" src="../js/pcMain.js"></script>
+
+<script type="text/javascript">
+  //针对虚拟键盘弹出，改变work area，有可能导致窗口大小发生变化导致显示错误的问题进行处理
+    // $(window).on('resize', function(){
+
+    //   clearTimeout(window.resizeProcess);
+
+    //   window.resizeProcess = setTimeout(function(){
+    //     resizeMainContentPanel();
+    //   }, 50);    
+    // });
+
+    // resizeMainContentPanel();    
+
+    // function resizeMainContentPanel(){
+    //   var windowHeight = $(window).height();
+
+    //   var headerHeight = $('#header').height();
+    //   var footerHeight = $('#footer').height();
+
+    //   if(windowHeight < headerHeight + footerHeight){
+    //     return false;
+    //   }
+      
+    //   var rootHeight = windowHeight - 18;
+    //   // 如果不 - 2，会挡住 footer 一点点
+    //   var classwoomWrapHeight = rootHeight - headerHeight - footerHeight - 2;
+
+    // $('#root').height(rootHeight);
+    // $('.classroom-wrap').height(classwoomWrapHeight);    
+    // }
+</script>
+
+</body>
+</html>

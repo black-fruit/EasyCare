@@ -1,0 +1,1 @@
+var EventEmitter=require("events"),EasiEventEmitter=new EventEmitter;module.exports=EasiEventEmitter;

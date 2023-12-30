@@ -1,0 +1,13 @@
+{
+  "AppSign": {
+    "key": "easicare-pc",
+    "secret": "lXHhgZqmGe"
+  },
+  "appName": "EasiCare",
+  "from": "self",
+  "updateKey": "1aefcd82889b9bb58200b0790236e722daade4d8",
+  "updateTime": "20210330",
+  "updateUrl": "http://e.seewo.com/info/apps.json",
+  "version": "2.1.0.1614",
+  "xChannel": "official-website"
+}

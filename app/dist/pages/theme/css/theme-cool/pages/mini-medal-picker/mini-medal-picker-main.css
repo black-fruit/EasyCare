@@ -1,0 +1,84 @@
+
+@font-face {
+	font-family: 'PingFangSC-Regular';
+	src: url('../../../../../theme/font/PingFangSC/PingFangSC-Regular.woff') format('woff');
+}
+
+/* 由于PC版自带chrome内核，光明正大地修改滚动条样式 */
+::-webkit-scrollbar {width: 6px;height:6px;}
+::-webkit-scrollbar-track-piece{background-color: #eee;}
+::-webkit-scrollbar-thumb{background: #aaa;min-height: 150px;min-width: 150px;border-radius: 10px;}
+::-webkit-scrollbar-thumb:vertical:hover{background: #555555}
+::-webkit-scrollbar-thumb:horizontal:hover{background: #555555}
+
+html{
+	height: 100%;
+}
+
+body{
+	margin: 0;
+
+	height: 100%;
+	
+	/* 防止第三方样式引入白底 */
+	background: transparent !important;
+
+	overflow: hidden;	
+}
+
+.theme-cool #main-panel{
+	display: block;
+
+	width: 800px;
+	height: 610px;	
+
+	border-radius: 4px;
+
+	background-color: #122041;
+
+	border: 1px solid #122041;
+}
+
+.theme-cool #header{
+	-webkit-user-select: none;
+	user-select: none;
+	-webkit-app-region: drag;
+
+	height: 40px;
+
+	padding-left: 20px;
+
+	background-color: #39A8FF;
+
+	position: relative;
+
+	z-index: 1000;
+}
+
+.theme-cool #header .close-btn{
+	-webkit-app-region: no-drag;
+	float: right;
+	cursor: pointer;
+	padding: 7px;
+	margin-right: 16px;
+	font-size: 16px;
+	color: #fff;
+}
+
+.theme-cool #header .close-btn:before {
+	font-weight: bold;
+}
+
+.theme-cool #header-title{
+	color: #fff;
+	font-size: 16px;
+	line-height: 40px;
+
+	font-family: 'PingFangSC-Regular';
+	line-height: 46px;
+}
+
+.theme-cool #bodyer{
+	padding: 10px;
+	font-size: 12px;
+}

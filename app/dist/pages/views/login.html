@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+  <title>班级优化大师-抓住孩子的每一课闪光点</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  
+  <script>
+    try {
+      window.initFrame();
+    } catch(e) {}
+  </script>
+  <link href="../theme/css/login-main.css" rel="stylesheet" type="text/css" />
+
+  <script>
+    var _faq = _faq || [];
+    window.faq = _faq;
+    (function () {
+      var _appId = '6aa38563edc4a006bf940d65da5b0706';
+      var u = 'https://friday.cvte.com/agent/sdk/js/v2/fa.js?_appId=' + _appId;
+      var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+      g.type = 'text/javascript'; g.async = true; g.defer = true;
+      g.src = u;
+      s.parentNode.insertBefore(g, s);
+      _faq.push(['setEnv', {
+        sysVer: '1.0'
+      }]);
+      var uidInfo = document.cookie.match(/uid=[0-9a-f]{32}/);
+      var uid = uidInfo ? uidInfo[0].slice(4) : null;
+      _faq.push(['setUser', {
+        id: uid
+      }]);
+    })();
+  </script>
+
+</head>
+
+<body style="background: transparent; margin: 0; height: 100%;">
+
+<!-- content -->
+
+<div id="main-panel">
+
+  <div id="header">
+    <div class="logo"></div>
+    <div class="close-btn-wrap">
+      <i class='iconfont close-icon'>&#xe677;</i>
+    </div>
+    <ul class="content-panel">
+      <li id='li-product-introduction'>
+        <i class='iconfont operation-icon description'>&#xe64d;</i>
+        <a>产品介绍</a>
+      </li>
+      <li id='li-download-apps'>
+        <i class='iconfont operation-icon download'>&#xe645;</i>
+        <a>下载手机端</a>
+      </li>
+    </ul>
+  </div>
+  <div id="bodyer">
+
+  </div>
+  <div id="product-intro-panel">
+    <div class="title">
+      <img src="../theme/images/login/title-logo.png" />
+    </div>
+    <div class="content">
+      <p>
+        一款由希沃自主研发，针对学生行为的及时反馈教学工具，通过卡通画的角色、即时的点评反馈、实时排名的成就体系、激发学生的好胜心与积极性，从而带来高效、有序、欢乐的课堂。
+      </p>
+      <ul class="guide-list">
+        <li>教师注册帐号，可终生免费使用</li>
+        <li>支持三个终端使用，同一帐号登录自动同步数据</li>
+        <li>所有功能均需联网使用</li>
+      </ul>
+      <ul class="imgs-list">
+        <li>
+          <img src="../theme/images/login/intro-pc.png" />
+          <h5>windows端</h5>
+          <p>(win7及以上系统)</p>
+        </li>
+        <li>
+          <img src="../theme/images/login/intro-web.png" />
+          <h5>网页端</h5>
+          <p>(https://care.seewo.com)</p>
+        </li>
+        <li>
+          <img src="../theme/images/login/intro-apps.png" />
+          <h5>手机端</h5>
+          <p>
+            <a class='btn-download-apps'>立即下载</a>
+          </p>
+        </li>
+      </ul>
+    </div>
+    <div class="main-panel-controls">
+      <div class="btn-back">
+        <i class="iconfont">&#xe64c;</i>
+        <span>返回登录</span>
+      </div>
+    </div>
+  </div>
+  <div id="download-apps-panel">
+    <div class="content">
+      <div class="qrcode-panel">
+        <img src="../theme/images/login/care-download-app-qrcode.png" />
+        <p>扫码下载手机端</p>
+      </div>
+    </div>
+    <div class="main-panel-controls">
+      <div class="btn-back">
+        <i class="iconfont">&#xe64c;</i>
+        <span>返回登录</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+  if (typeof module === 'object') {window.module = module; module = undefined;}
+</script>
+<script type="text/javascript" src="../js/vendor/dynamics/dynamics.min.js"></script>
+<script type="text/javascript">
+  if(window.module){
+    module = window.module;
+  }
+</script>
+<script type="text/javascript" src='../js/vendor/zepto/zepto.min.js'></script>
+<script type="text/javascript" src='../js/vendor/moment/moment.min.js'></script>
+<script type="text/javascript" src="../js/vendor/fingerprint/fingerprint.js"></script>
+
+
+<script type="text/javascript">
+
+  window.remote = require('electron').remote;
+  window.config = remote.getGlobal('config');
+  window.logger = remote.getGlobal('log');
+
+  window.apiUrl 		= config['apiUrl'];
+  window.baseUrl 		= config['baseUrl'];
+  window.authUrl 		= config['authUrl'];
+
+  window.appName 		= config['appName']
+  window.productId 	= config['productId'];
+  window.version 		= config['version'];
+
+  window.careReportId = config['careReportId'];
+</script>
+
+<script type="text/javascript">
+
+  /* 防止右键弹出菜单 */
+  window.addEventListener('contenxtmenu', function(event){
+    event.preventDefault();
+    return false;
+  },false);
+
+  document.addEventListener('contenxtmenu', function(event){
+    event.preventDefault();
+    return false;
+  },false);
+
+  /* 防止拖拽图片 */
+  document.addEventListener('dragover',function(event){
+    event.preventDefault();
+    return false;
+  },false);
+
+  document.addEventListener('drop',function(event){
+    event.preventDefault();
+    return false;
+  },false);
+
+  window.isPcStyle = true; //PC端标志位
+
+  /* electron 专用写法 */
+  window.ipc = require('electron').ipcRenderer;
+
+  if(!!window.ipc === false){
+    window.ipc = require('ipc');
+  }
+
+  var closeEl = document.querySelector('#header .close-btn-wrap');
+
+  closeEl.addEventListener('click', function(){
+    ipc.send('app-quit');
+  });
+
+  //登录窗口业务相关的逻辑：‘产品介绍’，‘下载移动端’
+  $('#li-product-introduction').on('click', function(ev){
+    ev.preventDefault();
+    ev.stopPropagation();
+
+    $('#li-product-introduction').addClass('active');
+    $('#li-download-apps').removeClass('active');
+
+    $('#bodyer').hide();
+    $('#download-apps-panel').hide();
+    $('#product-intro-panel').show();
+  });
+
+  $('#li-download-apps, #product-intro-panel .btn-download-apps').on('click', function(ev){
+    ev.preventDefault();
+    ev.stopPropagation();
+
+    $('#li-download-apps').addClass('active');
+    $('#li-product-introduction').removeClass('active');
+
+    $('#bodyer').hide();
+    $('#product-intro-panel').hide();
+    $('#download-apps-panel').show();
+  });
+
+  $('.main-panel-controls .btn-back').on('click', function(ev){
+    ev.preventDefault();
+    ev.stopPropagation();
+
+    $('#li-download-apps').removeClass('active');
+    $('#li-product-introduction').removeClass('active');
+
+    $('#product-intro-panel').hide();
+    $('#download-apps-panel').hide();
+    $('#bodyer').show();
+  });
+
+  window.fingerprint = new Fingerprint({canvas: true}).get();
+  console.log('fingerprint:', window.fingerprint);
+
+  // /* 安装service worker，实现离线点评功能 */
+  // navigator.serviceWorker
+  //       .register('../../../sw-pc.js')
+  //       .then(registration => {
+  //           console.log('ServiceWorker 注册成功！作用域为: ', registration.scope);
+            
+  //         })
+  //       .catch(err => console.log('ServiceWorker 注册失败: ', err));
+
+  // navigator.serviceWorker.ready.then(function(registration) {
+  //   registration.active.postMessage({type: 'CONFIG', config: window.config})
+  // });
+
+</script>
+
+<script type="text/javascript" src="../js/pcLogin.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+	<title>班级优化大师-抓住孩子的每一课闪光点</title>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">	
+  
+  <script>
+    try {
+      window.initFrame();
+    } catch(e) {}
+  </script>
+	<style type="text/css">
+		html{ width: 100%; height: 100%; overflow: hidden; }
+    body { margin: 0; }
+		#main-icon{
+			cursor: pointer;
+			width: 130px;
+			height: 130px;
+			image-rendering: -webkit-optimize-contrast;
+			-webkit-user-select:none;
+			user-select:none;
+		}
+	</style>
+
+	<script type="text/javascript">
+		if (typeof module === 'object') {window.module = module; module = undefined;}
+	</script>
+	
+	<script type="text/javascript" src="../js/vendor/jquery/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/vendor/jquery-ui/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="../js/vendor/jquery-ui/jquery.ui.touch-punch.min.js"></script>
+	
+	<script type="text/javascript">
+		if(window.module){
+			module = window.module;
+		}
+	</script>
+
+</head>
+<body style="position: relative;">
+	<img id="main-icon" draggable="false" src="../theme/images/common/icon-honor-xixi-draggable.png"/>
+	<div id="main-panel">		
+	</div>
+	
+	<script type="text/javascript">
+
+		/* 防止右键弹出菜单 */
+		window.addEventListener('contenxtmenu', function(event){
+			event.preventDefault();
+			return false;
+		},false);
+
+		document.addEventListener('contenxtmenu', function(event){
+			event.preventDefault();
+			return false;
+		},false);
+
+		/* 防止拖拽图片 */
+		document.addEventListener('dragover',function(event){
+			event.preventDefault();
+			return false;
+		},false);
+
+		document.addEventListener('drop',function(event){
+			event.preventDefault();
+			return false;
+		},false);
+
+		window.ipc = require('electron').ipcRenderer;
+
+		if(!!window.ipc === false){
+			window.ipc = require('ipc');
+		}
+
+		$(function(){
+
+			var senderWindow = '';
+			var isDragging   = false;
+			var hasMove 	 = false;
+
+			window.ipc.on('sender-to-show', function(event, windowName){				
+				senderWindow = windowName;
+			});
+	
+			$('#main-icon').draggable({
+				distance: 10,				
+				start: function(event, ui){
+
+					isDragging = true;
+					hasMove    = false;
+
+					//去除点击事件响应
+					$('#main-icon').unbind('click');					
+				},
+				drag: function(event, ui){
+
+					//向主进程发送消息，调整窗口的位置
+					window.ipc.send('dragging-honor-mini-window', ui.position);
+
+					hasMove = true;
+				},
+				stop: function(){
+					
+					isDragging = false;
+
+					if(hasMove === false){
+						//如果没有移动，默认为点击事件
+						handleClick();
+					}
+
+					//添加点击事件的响应					
+					setTimeout(function(){
+						$('#main-icon').bind('click', handleClick);						
+					}, 50);
+				}
+			});	
+
+			$('#main-icon').bind('click', handleClick);
+			$('#main-icon').bind('touchstart', handleTouchStart);
+			$('#main-icon').bind('touchend', handleTouchEnd);
+
+			function handleClick(){
+
+				switch(senderWindow) {
+					case 'main-window':
+						ipc.send('show-main-window-without-animation');
+						break;
+					case 'honor-window':
+						ipc.send('show-honor-window-without-animation');
+						break;
+					case 'honor-window-with-raffle-window':
+						ipc.send('show-honor-window-without-animation');
+						ipc.send('maximize-raffle-window');
+						break;
+					case 'honor-window-with-student-picker-window':
+						ipc.send('show-honor-window-without-animation');
+						ipc.send('maximize-raffle-student-picker-window');
+						break;
+					default:
+						ipc.send('show-main-window-without-animation');
+						break;
+				}
+			}
+
+			/* 触摸点击事件的特殊处理 Start */
+			var touchStartTime = 0;
+			var touchEndTime   = 0;
+
+			function handleTouchStart(ev){
+
+				ev.preventDefault();
+
+				touchStartTime = new Date().getTime();				
+			}
+
+			function handleTouchEnd(ev){
+
+				ev.preventDefault();
+
+				touchEndTime = new Date().getTime();
+
+				if(touchEndTime > touchStartTime 
+				   &&
+				   touchEndTime - touchStartTime < 500
+				){
+					$('#main-icon').click();
+				}
+			}
+			/* 触摸点击事件的特殊处理 End */
+		});		
+
+	</script>
+</body>	
+
+
+</html>
